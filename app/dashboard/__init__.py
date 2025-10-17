@@ -1,5 +1,10 @@
 from flask import Blueprint
+from flask_restful import Api
 
 dashboard_bp = Blueprint('dashboard',__name__)
+api = Api(dashboard_bp)
 
 from . import routes
+from .api_routes import TaskListResource
+
+api.add_resource(TaskListResource, "/tasks", "/tasks/<int:task_id>")
