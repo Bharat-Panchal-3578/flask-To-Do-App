@@ -37,7 +37,7 @@ def create_app(config_class='app.config.DevelopmentConfig'):
     from app import models
 
     # Attaches blueprints
-    app.register_blueprint(auth_bp, url_prefix='/auth')
+    app.register_blueprint(auth_bp, url_prefix='')
     app.register_blueprint(dashboard_bp, url_prefix='/dashboard')
     app.register_blueprint(api_bp, url_prefix='/api')
 

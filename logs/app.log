@@ -293,3 +293,49 @@ jwt.exceptions.InvalidSignatureError: Signature verification failed
 2025-10-16 18:15:23,299 [INFO] 127.0.0.1 - - [16/Oct/2025 18:15:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-10-16 18:15:23,303 [INFO] 127.0.0.1 - - [16/Oct/2025 18:15:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-10-16 18:15:23,304 [INFO] 127.0.0.1 - - [16/Oct/2025 18:15:23] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-10-17 21:33:55,816 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-17 21:33:55,817 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-17 21:33:55,819 [INFO]  * Restarting with stat
+2025-10-17 21:33:56,542 [WARNING]  * Debugger is active!
+2025-10-17 21:33:56,546 [INFO]  * Debugger PIN: 145-734-327
+2025-10-17 21:34:05,388 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-17 21:34:05,467 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:05] "GET /auth/register HTTP/1.1" 200 -
+2025-10-17 21:34:05,487 [ERROR] 404 Error: /static/js/script.js
+2025-10-17 21:34:05,502 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:05] "[33mGET /static/js/script.js HTTP/1.1[0m" 404 -
+2025-10-17 21:34:05,559 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-17 21:34:05,579 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:05] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-10-17 21:34:05,592 [ERROR] 404 Error: /favicon.ico
+2025-10-17 21:34:05,592 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-17 21:34:11,545 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:11] "GET /auth/register HTTP/1.1" 200 -
+2025-10-17 21:34:11,563 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-17 21:34:11,565 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:11] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-10-17 21:34:11,565 [ERROR] 404 Error: /static/js/script.js
+2025-10-17 21:34:11,566 [INFO] 127.0.0.1 - - [17/Oct/2025 21:34:11] "[33mGET /static/js/script.js HTTP/1.1[0m" 404 -
+2025-10-17 21:35:18,468 [INFO]  * Detected change in 'C:\\Users\\HP\\Desktop\\Lucky_ka_Folder\\Python_Web_Development_2\\flask_phase_7\\app\\auth\\__init__.py', reloading
+2025-10-17 21:35:18,592 [INFO]  * Restarting with stat
+2025-10-17 21:35:20,998 [WARNING]  * Debugger is active!
+2025-10-17 21:35:20,999 [INFO]  * Debugger PIN: 145-734-327
+2025-10-17 21:35:24,061 [INFO]  * Detected change in 'C:\\Users\\HP\\Desktop\\Lucky_ka_Folder\\Python_Web_Development_2\\flask_phase_7\\app\\auth\\__init__.py', reloading
+2025-10-17 21:35:24,164 [INFO]  * Restarting with stat
+2025-10-17 21:35:25,218 [WARNING]  * Debugger is active!
+2025-10-17 21:35:25,219 [INFO]  * Debugger PIN: 145-734-327
+2025-10-17 21:35:26,252 [INFO]  * Detected change in 'C:\\Users\\HP\\Desktop\\Lucky_ka_Folder\\Python_Web_Development_2\\flask_phase_7\\app\\auth\\__init__.py', reloading
+2025-10-17 21:35:26,345 [INFO]  * Restarting with stat
+2025-10-17 21:35:27,205 [WARNING]  * Debugger is active!
+2025-10-17 21:35:27,207 [INFO]  * Debugger PIN: 145-734-327
+2025-10-17 21:36:37,719 [ERROR] 404 Error: /api/register
+2025-10-17 21:36:37,738 [INFO] 127.0.0.1 - - [17/Oct/2025 21:36:37] "[33mPOST /api/register HTTP/1.1[0m" 404 -
+2025-10-17 21:39:22,839 [INFO] 127.0.0.1 - - [17/Oct/2025 21:39:22] "[31m[1mPOST /auth/api/register HTTP/1.1[0m" 400 -
+2025-10-17 21:39:33,856 [INFO] 127.0.0.1 - - [17/Oct/2025 21:39:33] "POST /auth/api/register HTTP/1.1" 200 -
+2025-10-17 21:39:58,792 [INFO] 127.0.0.1 - - [17/Oct/2025 21:39:58] "POST /auth/api/login HTTP/1.1" 200 -
+2025-10-17 21:41:55,799 [INFO] 127.0.0.1 - - [17/Oct/2025 21:41:55] "[31m[1mPOST /auth/api/refresh HTTP/1.1[0m" 422 -
+2025-10-17 21:42:19,130 [INFO] 127.0.0.1 - - [17/Oct/2025 21:42:19] "POST /auth/api/refresh HTTP/1.1" 200 -
+2025-10-17 21:42:51,861 [INFO] 127.0.0.1 - - [17/Oct/2025 21:42:51] "[31m[1mPOST /auth/api/logout HTTP/1.1[0m" 400 -
+2025-10-17 21:43:03,813 [INFO] 127.0.0.1 - - [17/Oct/2025 21:43:03] "[31m[1mPOST /auth/api/logout HTTP/1.1[0m" 400 -
+2025-10-17 21:43:20,320 [INFO] 127.0.0.1 - - [17/Oct/2025 21:43:20] "POST /auth/api/logout HTTP/1.1" 200 -
+2025-10-17 21:43:57,834 [INFO]  * Detected change in 'C:\\Users\\HP\\Desktop\\Lucky_ka_Folder\\Python_Web_Development_2\\flask_phase_7\\app\\__init__.py', reloading
+2025-10-17 21:43:57,932 [INFO]  * Restarting with stat
+2025-10-17 21:43:58,955 [WARNING]  * Debugger is active!
+2025-10-17 21:43:58,957 [INFO]  * Debugger PIN: 145-734-327
+2025-10-17 21:44:38,759 [INFO] 127.0.0.1 - - [17/Oct/2025 21:44:38] "POST /api/login HTTP/1.1" 200 -

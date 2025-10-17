@@ -1,11 +1,13 @@
 from flask import Blueprint
 from flask_restful import Api
-from . import routes
-from .api_routes import RegisterResource, LoginResource, RefreshTokenResource, LogoutResource
 
 auth_bp = Blueprint("auth",__name__)
 api = Api(auth_bp)
-api.add_resource(RegisterResource,"/register")
-api.add_resource(LoginResource,"/login")
-api.add_resource(RefreshTokenResource,"/refresh")
-api.add_resource(LogoutResource,"/logout")
+
+from . import routes
+from .api_routes import RegisterResource, LoginResource, RefreshTokenResource, LogoutResource
+
+api.add_resource(RegisterResource,"/api/register")
+api.add_resource(LoginResource,"/api/login")
+api.add_resource(RefreshTokenResource,"/api/refresh")
+api.add_resource(LogoutResource,"/api/logout")
