@@ -8,16 +8,63 @@ from app.models import BlackListedToken
 
 class RegisterResource(Resource):
     def post(self):
-        pass
+        data = request.get_json()
+        username = data.get('username')
+        password = data.get('password')
+
+        if not username or not password:
+            return error_response(message="Missing fields",status=400)
+
+        existing_user = User.query.filter_by(username=username).first()
+
+        if existing_user:
+            return error_response(message="Username already taken.",status=400)
+        
+        user = User(username=username)
+        user.set_password(password)
+
+        db.session.add(user)
+        db.session.commit()
+
+        return success_response({"username":username,"message":"Data received"},201)
 
 class LoginResource(Resource):
     def post(self):
-        pass
+        data = request.get_json()
+        username = data.get('username')
+        password = data.get('password')
+
+        user = User.query.filter_by(username=username).first()
+
+        if not user or not user.check_password(password):
+            return error_response("Invalid username or password.",status=401)
+        
+        token = create_access_token(identity=str(user.id))
+        refresh_token = create_refresh_token(identity=str(user.id))
+        
+        return success_response({
+            "access_token":token,
+            "refresh_token": refresh_token
+        })
 
 class RefreshTokenResource(Resource):
+    @jwt_required(refresh=True)
     def post(self):
-        pass
+        current_user_id = get_jwt_identity()
+        new_access_token = create_access_token(identity=current_user_id)
+
+        return success_response({'access_token':new_access_token})
 
 class LogoutResource(Resource):
     def post(self):
-        pass
+        data = request.json
+        refresh_token = data.get('refresh_token')
+
+        if not refresh_token:
+            return error_response(message="Refresh token is required.",status=400)
+        
+        blacklisted_token = BlackListedToken(token=refresh_token)
+
+        db.session.add(blacklisted_token)
+        db.session.commit()
+        return success_response(message="Logged out successfully")
