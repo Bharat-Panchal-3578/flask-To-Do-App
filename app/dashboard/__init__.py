@@ -7,4 +7,4 @@ api = Api(dashboard_bp)
 from . import routes
 from .api_routes import TaskListResource
 
-api.add_resource(TaskListResource, "/tasks", "/tasks/<int:task_id>")
+api.add_resource(TaskListResource, "/api/tasks", "/api/tasks/<int:task_id>")

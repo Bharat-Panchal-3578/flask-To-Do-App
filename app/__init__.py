@@ -32,14 +32,12 @@ def create_app(config_class='app.config.DevelopmentConfig'):
     # Import blueprints
     from app.auth import auth_bp
     from app.dashboard import dashboard_bp
-    from app.api import api_bp
 
     from app import models
 
     # Attaches blueprints
     app.register_blueprint(auth_bp, url_prefix='')
     app.register_blueprint(dashboard_bp, url_prefix='/dashboard')
-    app.register_blueprint(api_bp, url_prefix='/api')
 
     @app.route('/')
     def home():

@@ -339,3 +339,14 @@ jwt.exceptions.InvalidSignatureError: Signature verification failed
 2025-10-17 21:43:58,955 [WARNING]  * Debugger is active!
 2025-10-17 21:43:58,957 [INFO]  * Debugger PIN: 145-734-327
 2025-10-17 21:44:38,759 [INFO] 127.0.0.1 - - [17/Oct/2025 21:44:38] "POST /api/login HTTP/1.1" 200 -
+2025-10-17 22:18:45,370 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-17 22:18:45,371 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-17 22:18:45,374 [INFO]  * Restarting with stat
+2025-10-17 22:18:46,201 [WARNING]  * Debugger is active!
+2025-10-17 22:18:46,204 [INFO]  * Debugger PIN: 145-734-327
+2025-10-17 22:19:31,369 [INFO] 127.0.0.1 - - [17/Oct/2025 22:19:31] "POST /api/login HTTP/1.1" 200 -
+2025-10-17 22:21:02,761 [INFO] 127.0.0.1 - - [17/Oct/2025 22:21:02] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-17 22:21:37,653 [INFO] 127.0.0.1 - - [17/Oct/2025 22:21:37] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-17 22:22:25,758 [INFO] 127.0.0.1 - - [17/Oct/2025 22:22:25] "PUT /dashboard/api/tasks/42 HTTP/1.1" 200 -
+2025-10-17 22:22:35,967 [INFO] 127.0.0.1 - - [17/Oct/2025 22:22:35] "DELETE /dashboard/api/tasks/42 HTTP/1.1" 200 -
