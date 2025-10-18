@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Task Manager{% endblock %}
+
+{% block content %}
+    <div class="hero">
+        <div class="container">
+            <h1>Welcome to Task Manager</h1>
+            <p>Stay Organized productive, and in control of your daily tasks.</p>
+            <a href="{{ url_for('auth.register') }}">Get Started</a>
+            <a href="{{ url_for('auth.login') }}">Login</a>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="container">
+            <h2>Features of My Task Manager App</h2>
+            <ul>
+                <li>Secure authentication and private data.</li>
+                <li>Create and manage your daily tasks easily.</li>
+                <li>Mark them as completed or pending to see your daily progress.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="container">
+            <h2>About Task Manager</h2>
+            <p>Task Manager is a simple yet powerful tool to help you plan, track, and complete your daily goals. Designed for focus and simplicity, it’s built using <strong>Flask, SQLAlchemy and REST APIs</strong> to deliver a smooth experience.</p>
+        </div>
+    </div>
+{% endblock %}

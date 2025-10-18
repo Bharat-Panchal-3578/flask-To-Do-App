@@ -32,16 +32,14 @@ def create_app(config_class='app.config.DevelopmentConfig'):
     # Import blueprints
     from app.auth import auth_bp
     from app.dashboard import dashboard_bp
+    from app.home import home_bp
 
     from app import models
 
     # Attaches blueprints
     app.register_blueprint(auth_bp, url_prefix='')
     app.register_blueprint(dashboard_bp, url_prefix='/dashboard')
-
-    @app.route('/')
-    def home():
-        return redirect(url_for('auth.register'))
+    app.register_blueprint(home_bp)
 
     @app.errorhandler(404)
     def not_found_error(error):
