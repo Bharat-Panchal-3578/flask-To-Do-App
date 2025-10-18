@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_jwt_extended import JWTManager
 from dotenv import load_dotenv
 from app.extensions import db
+from app.utils import handle_404, handle_500
 import os
 import logging
 
@@ -41,14 +42,8 @@ def create_app(config_class='app.config.DevelopmentConfig'):
     app.register_blueprint(dashboard_bp, url_prefix='/dashboard')
     app.register_blueprint(home_bp)
 
-    @app.errorhandler(404)
-    def not_found_error(error):
-        logging.error(f"404 Error: {request.path}")
-        return render_template('404.html'),404
-    
-    @app.errorhandler(500)
-    def internal_error(error):
-        logging.error(f"500 Error: {request.path}")
-        return render_template('500.html'),500
+    # Error handlers
+    app.register_error_handler(404, handle_404)
+    app.register_error_handler(500, handle_500)
 
     return app
