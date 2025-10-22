@@ -17,7 +17,7 @@ add_task_btn.addEventListener('click', async () => {
     }
 
     try {
-        let response = await fetch('/api/tasks', {
+        let response = await fetch('/dashboard/api/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ add_task_btn.addEventListener('click', async () => {
             localStorage.setItem('access_token', newtoken);
             token = newtoken;
 
-            response = await fetch('/api/tasks', {
+            response = await fetch('/dashboard/api/tasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ function renderTask(task) {
         }
 
         try {
-            let response = await fetch(`/api/tasks/${toggleId}`, {
+            let response = await fetch(`/dashboard/api/tasks/${toggleId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ function renderTask(task) {
                 localStorage.setItem('access_token', newtoken);
                 token = newtoken;
 
-                response = await fetch(`/api/tasks/${toggleId}`, {
+                response = await fetch(`/dashboard/api/tasks/${toggleId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ function renderTask(task) {
         let token = localStorage.getItem('access_token');
 
         try {
-            let response = await fetch(`/api/tasks/${deleteId}`, {
+            let response = await fetch(`/dashboard/api/tasks/${deleteId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -166,7 +166,7 @@ function renderTask(task) {
                 localStorage.setItem('access_token', newtoken);
                 token = newtoken;
 
-                response = await fetch(`/api/tasks/${deleteId}`, {
+                response = await fetch(`/dashboard/api/tasks/${deleteId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -192,7 +192,7 @@ function renderTask(task) {
 async function fetchTasks() {
     let token = localStorage.getItem('access_token');
 
-    let response = await fetch('/api/tasks', {
+    let response = await fetch('/dashboard/api/tasks', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -212,7 +212,7 @@ async function fetchTasks() {
         localStorage.setItem('access_token', newtoken);
         token = newtoken;
 
-        response = await fetch('/api/tasks', {
+        response = await fetch('/dashboard/api/tasks', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -260,7 +260,7 @@ logoutBtn.addEventListener('click', async () => {
             localStorage.removeItem("access_token");
             localStorage.removeItem("refresh_token");
 
-            window.location.href = '/auth/login';
+            window.location.href = '/login';
         } else {
             console.error(data.message || "Failed to log out.");
         }

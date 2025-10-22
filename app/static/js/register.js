@@ -34,7 +34,8 @@ registerForm.addEventListener('submit', async (e) => {
             para.style.color = 'green';
             setTimeout(() => {
                 para.textContent = '';
-            }, 3000);
+                window.location.href = '/';
+            }, 2000);
             registerForm.reset();
         } else {
             para.textContent = 'Registration Failed!';

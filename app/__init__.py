@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask
 from flask_jwt_extended import JWTManager
 from dotenv import load_dotenv
 from app.extensions import db
