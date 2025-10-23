@@ -238,33 +238,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderTask(task);
     }
 });
-
-const logoutBtn = document.getElementById('logout-btn');
-
-logoutBtn.addEventListener('click', async () => {
-    const refreshToken = localStorage.getItem('refresh_token');
-
-    try {
-        const response = await fetch('/api/logout',{
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${refreshToken}`
-            },
-            body: JSON.stringify({ refresh_token: refreshToken })
-        });
-
-        const data = await response.json();
-
-        if (data.status === 'success') {
-            localStorage.removeItem("access_token");
-            localStorage.removeItem("refresh_token");
-
-            window.location.href = '/login';
-        } else {
-            console.error(data.message || "Failed to log out.");
-        }
-    } catch (error) {
-        console.log(error);
-    }
-});
