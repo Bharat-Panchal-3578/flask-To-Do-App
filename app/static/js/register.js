@@ -1,5 +1,10 @@
 const registerForm = document.getElementById('register-form');
 const para = document.getElementById('message');
+const access_token = localStorage.getItem('access_token');
+
+if (access_token) {
+    window.location.href = '/dashboard/tasks';
+}
 
 registerForm.addEventListener('submit', async (e) => {
     e.preventDefault() // prevent default page reload

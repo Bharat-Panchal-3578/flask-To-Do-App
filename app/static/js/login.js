@@ -1,5 +1,10 @@
 const login_form = document.getElementById('login-form');
 const message = document.getElementById('login-message');
+const access_token = localStorage.getItem('access_token');
+
+if (access_token) {
+    window.location.href = '/dashboard/tasks';
+}
 
 if (login_form) {
     login_form.addEventListener('submit', async (event) => {
