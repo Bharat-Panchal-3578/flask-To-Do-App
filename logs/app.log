@@ -1465,3 +1465,471 @@ jwt.exceptions.InvalidSignatureError: Signature verification failed
 2025-10-23 22:05:48,001 [INFO] 127.0.0.1 - - [23/Oct/2025 22:05:48] "GET /dashboard/api/tasks HTTP/1.1" 200 -
 2025-10-23 22:09:42,270 [INFO]  * Detected change in 'C:\\Users\\HP\\Desktop\\Lucky_ka_Folder\\Python_Web_Development_2\\flask_phase_7\\app\\utils.py', reloading
 2025-10-23 22:09:42,376 [INFO]  * Restarting with stat
+2025-10-23 22:10:09,277 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-23 22:10:09,277 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-23 22:10:09,279 [INFO]  * Restarting with stat
+2025-10-23 22:10:09,947 [WARNING]  * Debugger is active!
+2025-10-23 22:10:09,948 [INFO]  * Debugger PIN: 180-271-821
+2025-10-23 22:10:15,029 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:15] "GET / HTTP/1.1" 200 -
+2025-10-23 22:10:15,060 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:10:15,075 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:10:15,102 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:10:16,022 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "GET / HTTP/1.1" 200 -
+2025-10-23 22:10:16,040 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:10:16,041 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:10:16,047 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:10:16,469 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "GET / HTTP/1.1" 200 -
+2025-10-23 22:10:16,491 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:10:16,492 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:10:16,498 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:10:16,939 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "GET /register HTTP/1.1" 200 -
+2025-10-23 22:10:16,960 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:10:16,962 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:10:16,966 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:10:16,992 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:16] "GET /static/js/register.js HTTP/1.1" 200 -
+2025-10-23 22:10:17,016 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:17] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:10:17,036 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:10:17,037 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:10:17,041 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:10:17,042 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:17] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:10:17,085 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:17] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:10:19,617 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:19] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:10:19,641 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:10:19,642 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:10:19,645 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:10:19,670 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:19] "GET /static/js/login.js HTTP/1.1" 200 -
+2025-10-23 22:10:19,682 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:19] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:10:19,703 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:10:19,704 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:10:19,709 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:10:19,714 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:19] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:10:19,732 [INFO] 127.0.0.1 - - [23/Oct/2025 22:10:19] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:15:40,486 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:40] "PUT /dashboard/api/tasks/46 HTTP/1.1" 200 -
+2025-10-23 22:15:40,979 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:40] "PUT /dashboard/api/tasks/46 HTTP/1.1" 200 -
+2025-10-23 22:15:42,384 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:42] "DELETE /dashboard/api/tasks/46 HTTP/1.1" 200 -
+2025-10-23 22:15:49,464 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:49] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:15:51,198 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:51] "PUT /dashboard/api/tasks/47 HTTP/1.1" 200 -
+2025-10-23 22:15:52,392 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:52] "POST /api/logout HTTP/1.1" 200 -
+2025-10-23 22:15:52,405 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:52] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:15:52,433 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:15:52,435 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:15:52,439 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:15:52,443 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:52] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:15:55,117 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:55] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:15:55,137 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:15:55,138 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:15:55,147 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:15:55,147 [INFO] 127.0.0.1 - - [23/Oct/2025 22:15:55] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:16:05,708 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:05] "POST /api/login HTTP/1.1" 200 -
+2025-10-23 22:16:05,719 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:05] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:16:05,748 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:16:05,749 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:16:05,753 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:16:05,759 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:05] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:16:05,778 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:05] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:16:34,376 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:34] "PUT /dashboard/api/tasks/47 HTTP/1.1" 200 -
+2025-10-23 22:16:35,438 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:35] "PUT /dashboard/api/tasks/47 HTTP/1.1" 200 -
+2025-10-23 22:16:39,637 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:39] "[35m[1mPOST /dashboard/api/tasks HTTP/1.1[0m" 500 -
+2025-10-23 22:16:41,421 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:41] "[35m[1mPOST /dashboard/api/tasks HTTP/1.1[0m" 500 -
+2025-10-23 22:16:52,787 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:52] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:16:52,816 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:16:52,831 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:16:52,831 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:52] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:16:52,832 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:16:52,849 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:52] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:16:53,403 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:53] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:16:53,428 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:16:53,428 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:16:53,430 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:53] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:16:53,434 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:16:53,451 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:53] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:16:57,745 [INFO] 127.0.0.1 - - [23/Oct/2025 22:16:57] "[35m[1mPOST /dashboard/api/tasks HTTP/1.1[0m" 500 -
+2025-10-23 22:17:11,256 [INFO] 127.0.0.1 - - [23/Oct/2025 22:17:11] "DELETE /dashboard/api/tasks/47 HTTP/1.1" 200 -
+2025-10-23 22:17:49,649 [INFO] 127.0.0.1 - - [23/Oct/2025 22:17:49] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:17:56,299 [INFO] 127.0.0.1 - - [23/Oct/2025 22:17:56] "DELETE /dashboard/api/tasks/48 HTTP/1.1" 200 -
+2025-10-23 22:17:58,278 [INFO] 127.0.0.1 - - [23/Oct/2025 22:17:58] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:02,656 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:02] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:05,831 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:05] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:08,312 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:08] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:10,207 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:10] "PUT /dashboard/api/tasks/49 HTTP/1.1" 200 -
+2025-10-23 22:18:11,209 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:11] "PUT /dashboard/api/tasks/50 HTTP/1.1" 200 -
+2025-10-23 22:18:15,065 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:15] "DELETE /dashboard/api/tasks/49 HTTP/1.1" 200 -
+2025-10-23 22:18:16,329 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:16] "DELETE /dashboard/api/tasks/50 HTTP/1.1" 200 -
+2025-10-23 22:18:16,752 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:16] "DELETE /dashboard/api/tasks/51 HTTP/1.1" 200 -
+2025-10-23 22:18:17,707 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:17] "DELETE /dashboard/api/tasks/52 HTTP/1.1" 200 -
+2025-10-23 22:18:19,430 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:19] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:19,459 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:18:19,460 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:18:19,461 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:18:19,461 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:19] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:18:19,483 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:19] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:20,682 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:20] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:18:20,706 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:18:20,707 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:18:20,712 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:18:20,720 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:20] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:18:20,731 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:20] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:20,748 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:18:20,748 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:18:20,758 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:18:20,760 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:20] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:18:20,776 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:20] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:21,932 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:21] "GET /register HTTP/1.1" 200 -
+2025-10-23 22:18:21,960 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:18:21,961 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:18:21,968 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:18:21,969 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:21] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-10-23 22:18:21,984 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:21] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:22,006 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:18:22,007 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:18:22,009 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:18:22,026 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:22] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:18:22,040 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:22] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:18:23,668 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:23] "GET / HTTP/1.1" 200 -
+2025-10-23 22:18:23,691 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:18:23,692 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:18:23,701 [INFO] 127.0.0.1 - - [23/Oct/2025 22:18:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:42:47,028 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-23 22:42:47,028 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-23 22:42:47,029 [INFO]  * Restarting with stat
+2025-10-23 22:42:47,698 [WARNING]  * Debugger is active!
+2025-10-23 22:42:47,699 [INFO]  * Debugger PIN: 180-271-821
+2025-10-23 22:42:51,986 [INFO] 127.0.0.1 - - [23/Oct/2025 22:42:51] "GET / HTTP/1.1" 200 -
+2025-10-23 22:42:52,002 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:42:52,019 [INFO] 127.0.0.1 - - [23/Oct/2025 22:42:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:42:52,053 [INFO] 127.0.0.1 - - [23/Oct/2025 22:42:52] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-23 22:42:52,095 [ERROR] 404 Error: /favicon.ico
+2025-10-23 22:42:52,096 [INFO] 127.0.0.1 - - [23/Oct/2025 22:42:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-23 22:43:35,122 [INFO] 127.0.0.1 - - [23/Oct/2025 22:43:35] "GET / HTTP/1.1" 200 -
+2025-10-23 22:43:35,135 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:43:35,136 [INFO] 127.0.0.1 - - [23/Oct/2025 22:43:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:43:35,140 [INFO] 127.0.0.1 - - [23/Oct/2025 22:43:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:45:29,534 [INFO]  * Detected change in 'C:\\Users\\HP\\Desktop\\Lucky_ka_Folder\\Python_Web_Development_2\\flask_phase_7\\env\\Lib\\site-packages\\pymysql\\err.py', reloading
+2025-10-23 22:45:29,637 [INFO]  * Restarting with stat
+2025-10-23 22:45:39,269 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-23 22:45:39,269 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-23 22:45:39,270 [INFO]  * Restarting with stat
+2025-10-23 22:45:39,934 [WARNING]  * Debugger is active!
+2025-10-23 22:45:39,935 [INFO]  * Debugger PIN: 180-271-821
+2025-10-23 22:46:09,986 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:09] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:10,001 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:10,005 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:10,035 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:10,150 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:10] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:10,176 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:10,178 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:10,182 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:10,306 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:10] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:10,342 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:10,343 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:10,346 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:11,916 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:11] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:11,930 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:11,931 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:11,940 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:11] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-23 22:46:11,950 [ERROR] 404 Error: /favicon.ico
+2025-10-23 22:46:11,951 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-23 22:46:13,379 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:13] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:13,393 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:13,393 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:13,397 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:13,587 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:13] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:13,602 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:13,603 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:13,609 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:24,775 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-23 22:46:24,776 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-23 22:46:24,777 [INFO]  * Restarting with stat
+2025-10-23 22:46:25,450 [WARNING]  * Debugger is active!
+2025-10-23 22:46:25,451 [INFO]  * Debugger PIN: 180-271-821
+2025-10-23 22:46:29,024 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:29,038 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:29,043 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:29,079 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:29,195 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:29,213 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:29,213 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:29,218 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:29,367 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:29,395 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:29,397 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:29,404 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:29,501 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:29,530 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:29,532 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:29,537 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:29,658 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:29,692 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:29,693 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:29,696 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:31,664 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:31] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:46:31,688 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:31,688 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:31,691 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:31,694 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:31] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:46:31,705 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:31] "[31m[1mGET /dashboard/api/tasks HTTP/1.1[0m" 401 -
+2025-10-23 22:46:44,027 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:44] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:46:44,044 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:44,045 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:44,052 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:44,055 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:44] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:46:44,068 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:44] "[31m[1mGET /dashboard/api/tasks HTTP/1.1[0m" 401 -
+2025-10-23 22:46:46,061 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:46] "POST /api/logout HTTP/1.1" 200 -
+2025-10-23 22:46:46,090 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:46] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:46:46,113 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:46,114 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:46,120 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:46,120 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:46] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:46:48,120 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:48] "GET /register HTTP/1.1" 200 -
+2025-10-23 22:46:48,145 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:48,145 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:48,149 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:48,149 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:48] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-10-23 22:46:49,356 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:49] "GET / HTTP/1.1" 200 -
+2025-10-23 22:46:49,378 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:49,379 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:49,382 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:55,806 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:55] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:46:55,846 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:46:55,847 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:46:55,853 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:46:55,854 [INFO] 127.0.0.1 - - [23/Oct/2025 22:46:55] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:02,342 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:02] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:02,370 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:02,370 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:02,374 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:02] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:02,375 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:02,387 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:02] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:47:02,403 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:02,404 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:02,411 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:02,411 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:02] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:05,585 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:05] "GET / HTTP/1.1" 200 -
+2025-10-23 22:47:05,612 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:05,613 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:05,614 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:06,824 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:06] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:06,851 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:06,854 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:06,856 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:06,856 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:06] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:06,868 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:06] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:47:06,882 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:06,883 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:06,890 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:06,893 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:06] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:08,524 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:08] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:47:08,543 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:08,546 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:08,547 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:08,550 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:08] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:09,365 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:09] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:09,405 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:09,406 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:09,415 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:09,415 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:09] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:09,430 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:09] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:47:09,446 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:09,447 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:09,454 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:09,457 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:09] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:10,546 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:10] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:47:10,563 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:10,564 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:10,566 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:10,571 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:10] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:10,723 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:10] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:47:10,740 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:10,741 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:10,744 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:10,745 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:10] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:18,060 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:18] "POST /api/login HTTP/1.1" 200 -
+2025-10-23 22:47:18,070 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:18] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:18,096 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:18,097 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:18,102 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:18] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:18,103 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:18,123 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:18] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:21,771 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:21] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:21,788 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:47:21,791 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:47:21,797 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:47:21,798 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:21] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:47:21,814 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:21] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:37,297 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:37] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:40,691 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:40] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:43,641 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:43] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:47:45,473 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:45] "PUT /dashboard/api/tasks/55 HTTP/1.1" 200 -
+2025-10-23 22:47:46,235 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:46] "PUT /dashboard/api/tasks/55 HTTP/1.1" 200 -
+2025-10-23 22:47:47,141 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:47] "DELETE /dashboard/api/tasks/55 HTTP/1.1" 200 -
+2025-10-23 22:47:48,084 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:48] "DELETE /dashboard/api/tasks/54 HTTP/1.1" 200 -
+2025-10-23 22:47:49,022 [INFO] 127.0.0.1 - - [23/Oct/2025 22:47:49] "DELETE /dashboard/api/tasks/53 HTTP/1.1" 200 -
+2025-10-23 22:48:18,652 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:18] "GET / HTTP/1.1" 200 -
+2025-10-23 22:48:18,679 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:48:18,680 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:48:18,680 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:48:28,588 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:28] "GET /register HTTP/1.1" 200 -
+2025-10-23 22:48:28,615 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:48:28,617 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:48:28,622 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:28] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-10-23 22:48:28,622 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:48:28,633 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:28] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:48:28,652 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:48:28,653 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:48:28,659 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:48:28,660 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:28] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:48:28,679 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:28] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:48:31,143 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:31] "POST /api/logout HTTP/1.1" 200 -
+2025-10-23 22:48:31,154 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:31] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:48:31,175 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:48:31,178 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:48:31,183 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:48:31,185 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:31] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:48:32,675 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:32] "GET /register HTTP/1.1" 200 -
+2025-10-23 22:48:32,713 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:48:32,714 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:48:32,719 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:48:32,722 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:32] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-10-23 22:48:34,930 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:34] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:48:34,957 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:48:34,958 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:48:34,961 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:48:34,967 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:34] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:48:46,971 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:46] "GET / HTTP/1.1" 200 -
+2025-10-23 22:48:47,006 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:48:47,007 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:48:47,008 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:48:53,792 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:53] "GET / HTTP/1.1" 200 -
+2025-10-23 22:48:53,822 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:48:53,826 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:48:53,828 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:48:54,599 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:54] "GET / HTTP/1.1" 200 -
+2025-10-23 22:48:54,618 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:48:54,619 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:48:54,621 [INFO] 127.0.0.1 - - [23/Oct/2025 22:48:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:09,939 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:09] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:09,957 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:09,958 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:09,961 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:10,172 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:10] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:10,192 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:10,193 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:10,198 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:10,366 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:10] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:10,394 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:10,398 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:10,404 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:11,901 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:11] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:11,917 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:11,918 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:11,920 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:17,373 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:17] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:17,403 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:17,404 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:17,409 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:17,645 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:17] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:17,668 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:17,669 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:17,726 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:17,727 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:17] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:17,754 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:17,755 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:17,756 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:24,737 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:24] "GET /register HTTP/1.1" 200 -
+2025-10-23 22:49:24,767 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:24,768 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:24,771 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:24] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-10-23 22:49:24,772 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:27,174 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:27] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:27,231 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:27,232 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:27,237 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:31,415 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:31] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:49:31,441 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:31,442 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:31,446 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:31,450 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:31] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:49:38,256 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:38] "POST /api/login HTTP/1.1" 200 -
+2025-10-23 22:49:38,266 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:38] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:49:38,293 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:38,295 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:38,300 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:38,300 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:38] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:49:38,318 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:38] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:49:41,058 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:41] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:41,085 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:41,086 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:41,089 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:42,498 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:42] "GET /register HTTP/1.1" 200 -
+2025-10-23 22:49:42,527 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:42,528 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:42,529 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:42,530 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:42] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-10-23 22:49:42,543 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:42] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:49:42,557 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:42,558 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:42,566 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:42,567 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:42] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:49:42,585 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:42] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:49:44,371 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:44] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:44,395 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:44,398 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:44,402 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:45,719 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:45] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:49:45,739 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:45,740 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:45,750 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:45,751 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:45] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:49:45,763 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:45] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:49:45,781 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:45,781 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:45,787 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:49:45,787 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:45] "[36mGET /static/js/tasks.js HTTP/1.1[0m" 304 -
+2025-10-23 22:49:45,803 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:45] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:49:46,959 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:46] "GET / HTTP/1.1" 200 -
+2025-10-23 22:49:46,989 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:49:46,990 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:49:46,994 [INFO] 127.0.0.1 - - [23/Oct/2025 22:49:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:53:46,601 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:46] "GET / HTTP/1.1" 200 -
+2025-10-23 22:53:46,635 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:53:46,639 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:53:46,658 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-23 22:53:46,782 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:46] "GET / HTTP/1.1" 200 -
+2025-10-23 22:53:46,812 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:53:46,813 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:53:46,818 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:53:46,935 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:46] "GET / HTTP/1.1" 200 -
+2025-10-23 22:53:46,955 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:53:46,956 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:53:46,961 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:53:47,116 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:47] "GET / HTTP/1.1" 200 -
+2025-10-23 22:53:47,140 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:53:47,140 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:53:47,145 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:53:49,114 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:49] "GET /login HTTP/1.1" 200 -
+2025-10-23 22:53:49,160 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:53:49,161 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:53:49,164 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:53:49,164 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:49] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-10-23 22:53:49,179 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:49] "GET /dashboard/tasks HTTP/1.1" 200 -
+2025-10-23 22:53:49,197 [ERROR] 404 Error: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-23 22:53:49,198 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-23 22:53:49,204 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-23 22:53:49,240 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:49] "GET /static/js/tasks.js HTTP/1.1" 200 -
+2025-10-23 22:53:49,252 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:49] "GET /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:53:55,187 [INFO] 127.0.0.1 - - [23/Oct/2025 22:53:55] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:54:01,837 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:01] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:54:04,169 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:04] "PUT /dashboard/api/tasks/56 HTTP/1.1" 200 -
+2025-10-23 22:54:05,206 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:05] "PUT /dashboard/api/tasks/56 HTTP/1.1" 200 -
+2025-10-23 22:54:06,399 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:06] "PUT /dashboard/api/tasks/57 HTTP/1.1" 200 -
+2025-10-23 22:54:06,990 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:06] "PUT /dashboard/api/tasks/57 HTTP/1.1" 200 -
+2025-10-23 22:54:09,740 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:09] "DELETE /dashboard/api/tasks/56 HTTP/1.1" 200 -
+2025-10-23 22:54:10,677 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:10] "DELETE /dashboard/api/tasks/57 HTTP/1.1" 200 -
+2025-10-23 22:54:18,164 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:18] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:54:23,141 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:23] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:54:26,458 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:26] "POST /dashboard/api/tasks HTTP/1.1" 200 -
+2025-10-23 22:54:29,139 [INFO] 127.0.0.1 - - [23/Oct/2025 22:54:29] "POST /dashboard/api/tasks HTTP/1.1" 200 -

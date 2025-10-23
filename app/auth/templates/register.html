@@ -3,25 +3,26 @@
 {% block title %}Register{% endblock %}
 
 {% block content %}
-    <div class="auth-container">
-        <h2>Register</h2>
-        <form id="register-form" method="post">
-            <label for="username">Username</label><br>
-            <input type="text" name="username" id="username" required><br>
+<section class="auth-section">
+    <div class="container auth-container">
+        <h2 class="auth-title">Create an Account</h2>
+        <form id="register-form" class="auth-form" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="auth-input" required>
 
-            <label for="password">Password</label><br>
-            <input type="password" name="password" id="password" required><br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="auth-input" required>
 
-            <label for="confirm-password">Confirm Password</label><br>
-            <input type="password" name="confirm-password" id="confirm-password" required><br>
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" name="confirm-password" id="confirm-password" class="auth-input" required>
 
-            <button type="submit">Register</button>
+            <button type="submit" class="btn btn-primary">Register</button>
         </form>
-
-        <p id="message" style="margin-top:1em;"></p>
+        <p id="message" class="auth-message"></p>
     </div>
+</section>
 {% endblock %}
 
 {% block scripts %}
-    <script src="{{ url_for('static',filename='js/register.js') }}" defer></script>
+<script src="{{ url_for('static',filename='js/register.js') }}" defer></script>
 {% endblock %}

@@ -1,24 +1,25 @@
 {% extends 'base.html' %}
 
-{% block title %}Login Form{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block content %}
-<section class="auth-container">
-    <h2>Login</h2>
-    <form id="login-form">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+<section class="auth-section">
+    <div class="container auth-container">
+        <h2 class="auth-title">Login</h2>
+        <form id="login-form" class="auth-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="auth-input" required>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="auth-input" required>
 
-        <button type="submit">Login</button>
-    </form>
-
-    <p id="login-message"></p>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <p id="login-message" class="auth-message"></p>
+    </div>
 </section>
-{% endblock  %}
+{% endblock %}
 
 {% block scripts %}
-    <script src="{{ url_for('static', filename='js/login.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/login.js') }}" defer></script>
 {% endblock %}

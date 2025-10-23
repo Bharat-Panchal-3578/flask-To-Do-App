@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}To-Do App{% endblock  %}</title>
+    <title>{% block title %}To-Do App{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('home.home') }}">Home</a></li>
-                <li><a href="{{ url_for('auth.register')}}">Register</a></li>
-                <li><a href="{{ url_for('auth.login') }}">Login</a></li>
-                <li><a href="{{ url_for('dashboard.dashboard')}}">Dashboard</a></li>
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="{{ url_for('home.home') }}" class="logo">Task Manager</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home.home') }}" class="nav-item">Home</a></li>
+                <li><a href="{{ url_for('auth.register') }}" class="nav-item">Register</a></li>
+                <li><a href="{{ url_for('auth.login') }}" class="nav-item">Login</a></li>
+                <li><a href="{{ url_for('dashboard.dashboard') }}" class="nav-item">Dashboard</a></li>
                 {% if show_logout %}
-                    <li><button class="logout-btn" id="logout-btn">Logout</button></li>
+                    <li><button class="logout-btn nav-item" id="logout-btn">Logout</button></li>
                 {% endif %}
             </ul>
         </nav>
     </header>
 
-    {% block content %}{% endblock %}
+    <!-- Main Content -->
+    <main class="site-main container">
+        {% block content %}
+        {% endblock %}
+    </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="site-footer container">
         <p>&copy; 2025 To-Do App | All Rights Reserved</p>
     </footer>
 
