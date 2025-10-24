@@ -21,7 +21,7 @@ class Config:
 
     # Logging Configuration
     LOG_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs', 'app.log')
-    LOG_LEVEL = 'DEBUG'  # Can be overridden in Production if needed
+    LOG_LEVEL = 'DEBUG'
 
 # Development-specific settings
 class DevelopmentConfig(Config):
@@ -30,8 +30,18 @@ class DevelopmentConfig(Config):
 # Production-specific settings
 class ProductionConfig(Config):
     DEBUG = False
-    LOG_LEVEL = 'ERROR'  # Optional: for less verbose logging in production
+    LOG_LEVEL = 'ERROR'
 
 # Testing-specific settings
 class TestingConfig(Config):
-    TESTING = True  # ✅ This was `Testing` (capital T), should be `TESTING` to work with Flask
+    TESTING = True  # ✅ It should be `TESTING` to work with Flask
+
+    DB_USER = os.environ.get("DB_USER")
+    DB_PASSWORD = os.environ.get("DB_PASSWORD")
+    DB_HOST = os.environ.get("DB_HOST")
+    DB_PORT = os.environ.get("DB_PORT", "3306")
+    TEST_DB_NAME = os.environ.get("TEST_DB_NAME")
+
+    SQLALCHEMY_DATABASE_URI = (
+        f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{TEST_DB_NAME}"
+    )
