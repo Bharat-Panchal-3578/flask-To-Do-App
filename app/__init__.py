@@ -1,12 +1,9 @@
 from flask import Flask
-from flask_jwt_extended import JWTManager
 from dotenv import load_dotenv
-from app.extensions import db
+from app.extensions import db, jwt, migrate
 from app.utils import handle_404, handle_500
 import os
 import logging
-
-jwt = JWTManager()
 
 def create_app(config_class='app.config.DevelopmentConfig'):
     app = Flask(__name__)
@@ -28,6 +25,7 @@ def create_app(config_class='app.config.DevelopmentConfig'):
 
     # Initialize extensions (like SQLAlchemy)
     db.init_app(app)
+    migrate.init_app(app,db)
     jwt.init_app(app)
 
     # Import blueprints
