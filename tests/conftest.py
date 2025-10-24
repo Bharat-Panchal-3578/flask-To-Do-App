@@ -1,0 +1,23 @@
+import pytest
+from app import create_app, db as _db
+from app.models import User, Task
+
+@pytest.fixture(scope='session')
+def app():
+    """Create and configure a new app instance for tests."""
+    app = create_app("app.config.TestingConfig")
+    with app.app_context():
+        yield app
+
+@pytest.fixture(scope='session')
+def client(app):
+    """A test client for sending HTTP requests."""
+    return app.test_client()
+
+@pytest.fixture(scope='session')
+def db(app):
+    """Create the database tables and drop after testing."""
+    _db.app = app
+    _db.create_all()
+    yield _db
+    _db.drop_all()
