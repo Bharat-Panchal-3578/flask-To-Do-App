@@ -64,10 +64,13 @@ add_task_btn.addEventListener('click', async () => {
 
 function renderTask(task) {
     const li = document.createElement('li');
-    li.textContent = task.title;
+    const titleSpan = document.createElement('span');
+
+    titleSpan.textContent = task.title;
+    titleSpan.classList.add('task-title');
 
     if (task.done) {
-        li.style.textDecoration = 'line-through';
+        titleSpan.style.textDecoration = 'line-through';
     }
 
     const toggleBtn = document.createElement('button');
@@ -80,6 +83,7 @@ function renderTask(task) {
     deleteBtn.dataset.id = task.id;
     deleteBtn.classList.add('delete-btn');
 
+    li.appendChild(titleSpan);
     li.appendChild(toggleBtn);
     li.appendChild(deleteBtn);
     task_list.appendChild(li);
@@ -132,7 +136,7 @@ function renderTask(task) {
                 toggleBtn.classList.toggle('done', !task.done);
                 toggleBtn.classList.toggle('pending', task.done);
 
-                li.style.textDecoration = task.done ? 'line-through' : 'none';
+                titleSpan.style.textDecoration = task.done ? 'line-through' : 'none';
 
             } else {
                 console.error(`Error: ${data.message}`);
