@@ -1,4 +1,3 @@
-import pytest
 from flask import url_for
 
 def test_home_page(client):
