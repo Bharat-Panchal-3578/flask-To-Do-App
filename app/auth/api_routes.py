@@ -34,6 +34,9 @@ class LoginResource(Resource):
         username = data.get('username')
         password = data.get('password')
 
+        if not username or not password:
+            return error_response("Missing username or password",status=400)
+
         user = User.query.filter_by(username=username).first()
 
         if not user or not user.check_password(password):
