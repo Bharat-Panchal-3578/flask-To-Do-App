@@ -18,7 +18,7 @@ class RegisterResource(Resource):
         existing_user = User.query.filter_by(username=username).first()
 
         if existing_user:
-            return error_response(message="Username already taken.",status=400)
+            return error_response(message="Username already taken",status=400)
         
         user = User(username=username)
         user.set_password(password)
@@ -26,7 +26,7 @@ class RegisterResource(Resource):
         db.session.add(user)
         db.session.commit()
 
-        return success_response({"username":username,"message":"Data received"},201)
+        return success_response({"username":username,"message":"Data received"},status=201)
 
 class LoginResource(Resource):
     def post(self):
