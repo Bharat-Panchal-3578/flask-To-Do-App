@@ -29,7 +29,7 @@ class TaskListResource(Resource):
             "total_tasks":paginated.total
         }
 
-        return success_response(data)
+        return success_response(data=data, message="Tasks fetched successfully")
 
     @jwt_required()
     def post(self):
@@ -46,7 +46,7 @@ class TaskListResource(Resource):
         db.session.add(new_task)
         db.session.commit()
         
-        return success_response(new_task.to_dict(),201)
+        return success_response(new_task.to_dict(),message="Task created successfully",status=201)
 
     @jwt_required()
     def put(self, task_id):
@@ -56,14 +56,14 @@ class TaskListResource(Resource):
         task = Task.query.filter_by(id=task_id,user_id=current_user_id).first()
 
         if task is None:
-            return error_response(f"Task with task ID: {task_id} not found or unauthorized.")
+            return error_response(f"Task with task ID: {task_id} not found or unauthorized")
 
         task.title = data.get('title',task.title)
         task.done = data.get('done',task.done)
 
         db.session.commit()
 
-        return success_response(task.to_dict(),"Task updated successfully.")
+        return success_response(task.to_dict(),"Task updated successfully")
 
     @jwt_required()
     def delete(self, task_id):
@@ -71,12 +71,12 @@ class TaskListResource(Resource):
 
         task = Task.query.filter_by(id=task_id, user_id=current_user_id).first()
         if task is None:
-            return error_response(f"Task with task ID: {task_id} not found or unauthorized.")
+            return error_response(f"Task with task ID: {task_id} not found or unauthorized")
 
         db.session.delete(task)
         db.session.commit()
 
         return success_response(
             data=task.to_dict(),
-            message=f"Task with task ID: {task_id} deleted successfully."
+            message=f"Task with task ID: {task_id} deleted successfully"
         )
