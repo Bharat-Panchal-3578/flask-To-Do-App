@@ -5,14 +5,11 @@ from app.models import User, Task
 from app.extensions import db
 
 @pytest.fixture
-def setup_user_with_token(app):
+def setup_user_with_token(db):
     """
     Create a user in the test DB and yield a dict containing the user and
     a valid access token for that user. Clean up afterwards.
     """
-    db.drop_all()
-    db.create_all()
-
     user = User(username="test_user")
     user.set_password("test_password")
     db.session.add(user)
@@ -20,10 +17,8 @@ def setup_user_with_token(app):
 
     access_token = create_access_token(identity=str(user.id))
 
-    yield {"user":user, "access_token":access_token}
+    return {"user":user, "access_token":access_token}
 
-    db.session.remove()
-    db.drop_all()
 
 def test_get_tasks_emptylist(client, setup_user_with_token):
     """
@@ -50,7 +45,7 @@ def test_get_tasks_emptylist(client, setup_user_with_token):
     assert "total_tasks" in data["data"]
     assert data["data"]["total_tasks"] == 0
 
-def test_create_task_success(client,app, setup_user_with_token):
+def test_create_task_success(client, setup_user_with_token):
     """
     Test creating a new task (POST /dashboard/api/tasks)
     """
@@ -74,11 +69,10 @@ def test_create_task_success(client,app, setup_user_with_token):
     assert data["data"]["title"] == "Buy groceries"
     assert data["data"]["done"] is False
 
-    with app.app_context():
-        task = Task.query.filter_by(title="Buy groceries", user_id=user.id).first()
-        assert task is not None
+    task = Task.query.filter_by(title="Buy groceries", user_id=user.id).first()
+    assert task is not None
 
-def test_create_task_missing_title(client, app, setup_user_with_token):
+def test_create_task_missing_title(client, setup_user_with_token):
     """
     Test creating a task without any title should return error (HTTP 400)
     """
@@ -98,40 +92,39 @@ def test_create_task_missing_title(client, app, setup_user_with_token):
     assert data["status"] == "error"
     assert "Title is required" in data["message"]
 
-def test_update_task_success(client, app, setup_user_with_token):
+def test_update_task_success(client, setup_user_with_token):
     """Test updating an existing task (PUT /dashboard/api/tasks/<int:id>)"""
     user = setup_user_with_token["user"]
     access_token = setup_user_with_token["access_token"]
+    task = Task(title="Old Title", done=False, user_id=user.id)
+    db.session.add(task)
+    db.session.commit()
+    task_id = task.id
 
-    with app.app_context():
-        task = Task(title="Old Title", done=False, user_id=user.id)
-        db.session.add(task)
-        db.session.commit()
-        task_id = task.id
+    payload = {
+        "title": "Updated title",
+        "done": True
+    }
 
-        payload = {
-            "title": "Updated title",
-            "done": True
-        }
+    response = client.put(
+        url_for("dashboard.tasklistresource",task_id=task_id),
+        headers={"Authorization": f"Bearer {access_token}"},
+        json=payload
+    )
+    data = response.get_json()
 
-        response = client.put(
-            url_for("dashboard.tasklistresource",task_id=task_id),
-            headers={"Authorization": f"Bearer {access_token}"},
-            json=payload
-        )
-        data = response.get_json()
+    assert response.status_code == 200
+    assert data["status"] == "success"
+    assert "Task updated successfully" in data["message"]
+    assert data["data"]["title"] == "Updated title"
+    assert data["data"]["done"] is True
 
-        assert response.status_code == 200
-        assert data["status"] == "success"
-        assert "Task updated successfully" in data["message"]
-        assert data["data"]["title"] == "Updated title"
-        assert data["data"]["done"] is True
+    updated_task = Task.query.filter_by(id=task_id,user_id=user.id).first()
+    assert updated_task is not None
+    assert updated_task.title == "Updated title"
+    assert updated_task.done is True
 
-        updated_task = Task.query.filter_by(id=task_id,user_id=user.id).first()
-        assert updated_task is not None
-        assert updated_task.title == "Updated title"
-        assert updated_task.done is True
-def test_update_task_not_found(client, app, setup_user_with_token):
+def test_update_task_not_found(client, setup_user_with_token):
     """
     Trying to update a non-existent task should return 404.
     """
@@ -155,39 +148,34 @@ def test_update_task_not_found(client, app, setup_user_with_token):
     assert data["status"] == "error"
     assert f"Task with task ID: {invalid_task_id} not found or unauthorized" in data["message"]
 
-def test_delete_task_success(client, app, setup_user_with_token):
+def test_delete_task_success(client, setup_user_with_token):
     """Test deleting an existing task (DELETE /dashboard/api/tasks/<int:id>)"""
     user = setup_user_with_token["user"]
     access_token = setup_user_with_token['access_token']
 
-    with app.app_context():
-        task = Task(title="Task Title",done=False,user_id=user.id)
-        db.session.add(task)
-        db.session.commit()
+    task = Task(title="Task Title",done=False,user_id=user.id)
+    db.session.add(task)
+    db.session.commit()
 
-        task_id = task.id
+    task_id = task.id
 
-        response = client.delete(
-            url_for("dashboard.tasklistresource",task_id=task_id),
-            headers={"Authorization": f"Bearer {access_token}"}
-        )
-        data = response.get_json()
+    response = client.delete(
+        url_for("dashboard.tasklistresource",task_id=task_id),
+        headers={"Authorization": f"Bearer {access_token}"}
+    )
+    data = response.get_json()
 
-        assert response.status_code == 200
-        assert data["status"] == "success"
-        assert f"Task with task ID: {task_id} deleted successfully" in data["message"]
-        assert data["data"]["title"] == "Task Title"
-        assert data["data"]["done"] is False
+    assert response.status_code == 200
+    assert data["status"] == "success"
+    assert f"Task with task ID: {task_id} deleted successfully" in data["message"]
+    assert data["data"]["title"] == "Task Title"
+    assert data["data"]["done"] is False
 
-        with app.app_context():
-            deleted_task = Task.query.filter_by(id=task_id,user_id=user.id).first()
-            assert deleted_task is None
+    deleted_task = Task.query.filter_by(id=task_id,user_id=user.id).first()
+    assert deleted_task is None
 
-def test_delete_task_unauthorized_user(client, app):
+def test_delete_task_unauthorized_user(client, db):
     """Test that a user cannot delete another user's task"""
-    db.drop_all()
-    db.create_all()
-
     # Create two users
     user1 = User(username="user1")
     user1.set_password("pass1")
@@ -215,7 +203,6 @@ def test_delete_task_unauthorized_user(client, app):
     assert response.status_code == 404
     assert data["status"] == "error"
     assert f"not found or unauthorized" in data["message"]
-
-    with app.app_context():
-        task_still_exists = Task.query.filter_by(id=task.id,user_id=user1.id)
-        assert task_still_exists is not None
+    
+    task_still_exists = Task.query.filter_by(id=task.id,user_id=user1.id).first()
+    assert task_still_exists is not None

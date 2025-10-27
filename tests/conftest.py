@@ -17,8 +17,8 @@ def client(app):
 @pytest.fixture(scope='function')
 def db(app):
     """Create the database tables and drop after testing."""
-    _db.app = app
-    _db.create_all()
-    yield _db
-    _db.session.remove()
-    _db.drop_all()
+    with app.app_context():
+        _db.create_all()
+        yield _db
+        _db.session.remove()
+        _db.drop_all()

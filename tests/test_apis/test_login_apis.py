@@ -4,19 +4,15 @@ from app.models import User
 from app.extensions import db
 
 @pytest.fixture
-def setup_user(app):
+def setup_user(db):
     """Create a test user for login tests."""
-    db.drop_all()
-    db.create_all()
     user = User(username="test_user")
     user.set_password("test_password")
     db.session.add(user)
     db.session.commit()
-    yield
-    db.session.remove()
-    db.drop_all()
 
-def test_login_success(client, app, setup_user):
+    return user
+def test_login_success(client, setup_user):
     """Login with correct credentails should return 200 and tokens."""
     payload = {
         "username": "test_user",
@@ -31,7 +27,7 @@ def test_login_success(client, app, setup_user):
     assert "access_token" in data["data"]
     assert "refresh_token" in data["data"]
 
-def test_login_missing_fields(client, app, setup_user):
+def test_login_missing_fields(client, setup_user):
     """Login with missing username/password returns 400."""
     payload = {
         "username": "test_user"
@@ -44,7 +40,7 @@ def test_login_missing_fields(client, app, setup_user):
     assert data["status"] == "error"
     assert "Missing username or password" in data["message"]
 
-def test_login_invalid_password(client, app, setup_user):
+def test_login_invalid_password(client, setup_user):
     """Login with incorrect password should return 401."""
     payload = {
         "username": "test_user",
@@ -59,7 +55,7 @@ def test_login_invalid_password(client, app, setup_user):
     assert "Invalid username or password" in data["message"]
 
 
-def test_login_nonexistent_user(client, app, setup_user):
+def test_login_nonexistent_user(client, setup_user):
     "Login with non-existing username should return 401."
     payload = {
         "username": "user",

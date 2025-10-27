@@ -3,16 +3,7 @@ from flask import url_for
 from app.models import BlackListedToken
 from app.extensions import db
 
-@pytest.fixture
-def clean_db(app):
-    """Cleans up data before each test."""
-    db.drop_all()
-    db.create_all()
-    yield
-    db.session.remove()
-    db.drop_all()
-
-def test_logout_success(client, app, clean_db):
+def test_logout_success(client, db):
     """
     POST /api/logout with valid refresh_token should blacklist the token and return 200.
     """
@@ -27,11 +18,10 @@ def test_logout_success(client, app, clean_db):
     assert data["status"] == "success"
     assert "Logged out successfully" in data["message"]
 
-    with app.app_context():
-        blacklisted = BlackListedToken.query.filter_by(token="dummy_refresh_token_12345").first()
-        assert blacklisted is not None
+    blacklisted = BlackListedToken.query.filter_by(token="dummy_refresh_token_12345").first()
+    assert blacklisted is not None
 
-def test_logout_missing_token(client, app, clean_db):
+def test_logout_missing_token(client, db):
     """
     POST /api/logout without refresh_token should return 400.
     """

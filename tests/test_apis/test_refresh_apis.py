@@ -5,21 +5,15 @@ from app.extensions import db
 from app.models import User
 
 @pytest.fixture
-def setup_user_with_token(app):
+def setup_user_with_token(db):
     """Create a user and generate a refresh token."""
-    db.drop_all()
-    db.create_all()
-
     user = User(username="test_user")
     user.set_password("test_password")
     db.session.add(user)
     db.session.commit()
 
     refresh_token = create_refresh_token(identity=str(user.id))
-    yield user, refresh_token
-
-    db.session.remove()
-    db.drop_all()
+    return user, refresh_token
 
 def test_refresh_success(client, setup_user_with_token):
     """POST /api/refresh with valid refresh token should return new access token."""

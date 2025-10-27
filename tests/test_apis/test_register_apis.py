@@ -3,17 +3,7 @@ from flask import url_for
 from app.models import User
 from app.extensions import db
 
-@pytest.fixture
-def clean_db(app):
-    """Cleans up DB before each test."""
-    with app.app_context():
-        db.drop_all()
-        db.create_all()
-        yield
-        db.session.remove()
-        db.drop_all()
-
-def test_register_success(client, app, clean_db):
+def test_register_success(client, db):
     """
     Test for user registration.
     """
@@ -34,12 +24,10 @@ def test_register_success(client, app, clean_db):
     assert "username" in data["data"]
     assert data["data"]["username"] == "test_user"
 
-    # Verify user is actually in DB
-    with app.app_context():
-        user = User.query.filter_by(username="test_user").first()
-        assert user is not None
+    user = User.query.filter_by(username="test_user").first()
+    assert user is not None
 
-def test_register_missing_fields(client, app, clean_db):
+def test_register_missing_fields(client, db):
     """
     Test registration with missing username/password returns 400.
     """
@@ -58,7 +46,7 @@ def test_register_missing_fields(client, app, clean_db):
     assert data["status"] == "error"
     assert "Missing fields" in data["message"]
 
-def test_register_duplicate_user(client, app, clean_db):
+def test_register_duplicate_user(client, db):
     """
     Test registration fails if username already exists.
     """
