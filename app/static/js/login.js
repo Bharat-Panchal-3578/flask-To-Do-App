@@ -30,30 +30,3 @@ if (login_form) {
         },3000);
     });
 }
-
-async function refreshToken() {
-    const refreshToken = localStorage.getItem('refresh_token');
-
-    if (!refreshToken) {
-        window.location.href = '/login';
-        return null;
-    }
-
-    const response = await fetch('/api/refresh',{
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${refreshToken}`
-        }
-    });
-
-    const data = await response.json();
-
-    if (data.status === 'success') {
-        localStorage.setItem('access_token',data.data.access_token);
-        return data.data.access_token;
-    } else {
-        window.location.href = '/login';
-        return null;
-    }
-}
