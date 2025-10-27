@@ -97,3 +97,60 @@ def test_create_task_missing_title(client, app, setup_user_with_token):
     assert response.status_code == 400
     assert data["status"] == "error"
     assert "Title is required" in data["message"]
+
+def test_update_task_success(client, app, setup_user_with_token):
+    """Test updating an existing task (PUT /dashboard/api/tasks/<int:id>)"""
+    user = setup_user_with_token["user"]
+    access_token = setup_user_with_token["access_token"]
+
+    with app.app_context():
+        task = Task(title="Old Title", done=False, user_id=user.id)
+        db.session.add(task)
+        db.session.commit()
+        task_id = task.id
+
+        payload = {
+            "title": "Updated title",
+            "done": True
+        }
+
+        response = client.put(
+            url_for("dashboard.tasklistresource",task_id=task_id),
+            headers={"Authorization": f"Bearer {access_token}"},
+            json=payload
+        )
+        data = response.get_json()
+
+        assert response.status_code == 200
+        assert data["status"] == "success"
+        assert "Task updated successfully" in data["message"]
+        assert data["data"]["title"] == "Updated title"
+        assert data["data"]["done"] is True
+
+        updated_task = Task.query.filter_by(id=task_id,user_id=user.id).first()
+        assert updated_task is not None
+        assert updated_task.title == "Updated title"
+        assert updated_task.done is True
+def test_update_task_not_found(client, app, setup_user_with_token):
+    """
+    Trying to update a non-existent task should return 404.
+    """
+    user = setup_user_with_token["user"]
+    access_token = setup_user_with_token["access_token"]
+
+    invalid_task_id = 65465
+    payload = {
+        "title": "Does not exist",
+        "done": True
+    }
+
+    response = client.put(
+        url_for("dashboard.tasklistresource",task_id=invalid_task_id),
+        headers={"Authorization": f"Bearer {access_token}"},
+        json=payload
+    )
+    data = response.get_json()
+
+    assert response.status_code == 404
+    assert data["status"] == "error"
+    assert f"Task with task ID: {invalid_task_id} not found or unauthorized" in data["message"]
