@@ -77,3 +77,23 @@ def test_create_task_success(client,app, setup_user_with_token):
     with app.app_context():
         task = Task.query.filter_by(title="Buy groceries", user_id=user.id).first()
         assert task is not None
+
+def test_create_task_missing_title(client, app, setup_user_with_token):
+    """
+    Test creating a task without any title should return error (HTTP 400)
+    """
+    access_token = setup_user_with_token["access_token"]
+    payload = {
+        "done": False
+    }
+
+    response = client.post(
+        url_for("dashboard.tasklistresource"),
+        headers = { "Authorization": f"Bearer {access_token}"},
+        json = payload
+    )
+    data = response.get_json()
+
+    assert response.status_code == 400
+    assert data["status"] == "error"
+    assert "Title is required" in data["message"]
