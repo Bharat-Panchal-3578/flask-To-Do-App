@@ -154,3 +154,68 @@ def test_update_task_not_found(client, app, setup_user_with_token):
     assert response.status_code == 404
     assert data["status"] == "error"
     assert f"Task with task ID: {invalid_task_id} not found or unauthorized" in data["message"]
+
+def test_delete_task_success(client, app, setup_user_with_token):
+    """Test deleting an existing task (DELETE /dashboard/api/tasks/<int:id>)"""
+    user = setup_user_with_token["user"]
+    access_token = setup_user_with_token['access_token']
+
+    with app.app_context():
+        task = Task(title="Task Title",done=False,user_id=user.id)
+        db.session.add(task)
+        db.session.commit()
+
+        task_id = task.id
+
+        response = client.delete(
+            url_for("dashboard.tasklistresource",task_id=task_id),
+            headers={"Authorization": f"Bearer {access_token}"}
+        )
+        data = response.get_json()
+
+        assert response.status_code == 200
+        assert data["status"] == "success"
+        assert f"Task with task ID: {task_id} deleted successfully" in data["message"]
+        assert data["data"]["title"] == "Task Title"
+        assert data["data"]["done"] is False
+
+        with app.app_context():
+            deleted_task = Task.query.filter_by(id=task_id,user_id=user.id).first()
+            assert deleted_task is None
+
+def test_delete_task_unauthorized_user(client, app):
+    """Test that a user cannot delete another user's task"""
+    db.drop_all()
+    db.create_all()
+
+    # Create two users
+    user1 = User(username="user1")
+    user1.set_password("pass1")
+    user2 = User(username="user2")
+    user2.set_password("pass2")
+
+    db.session.add_all([user1,user2])
+    db.session.commit()
+
+    # Create a task for user1
+    task = Task(title="User1's Task",done=False,user_id=user1.id)
+    db.session.add(task)
+    db.session.commit()
+
+    # Generate token for user2 (different user)
+    access_token_user2 = create_access_token(identity=str(user2.id))
+
+    # Try deleting user1's task with user2's token
+    response = client.delete(
+        url_for("dashboard.tasklistresource",task_id=task.id),
+        headers={"Authorization": f"Bearer {access_token_user2}"},
+    )
+    data = response.get_json()
+
+    assert response.status_code == 404
+    assert data["status"] == "error"
+    assert f"not found or unauthorized" in data["message"]
+
+    with app.app_context():
+        task_still_exists = Task.query.filter_by(id=task.id,user_id=user1.id)
+        assert task_still_exists is not None
