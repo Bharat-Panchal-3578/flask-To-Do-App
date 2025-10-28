@@ -88,6 +88,21 @@ ul {
     color: white;
 }
 
+.site-footer .social-links {
+    margin-top: 0.5rem;
+}
+
+.site-footer a {
+    color: #c7d2fe;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 /* =========================
    Buttons
 ========================= */
