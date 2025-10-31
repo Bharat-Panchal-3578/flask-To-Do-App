@@ -37,7 +37,7 @@ This project demonstrates strong backend design, secure API development, fronten
 | Authentication | Flask-JWT-Extended |
 | Testing | pytest, pytest-cov |
 | Frontend | HTML, CSS, JavaScript (Vanilla) |
-| Deployment | Render / Railway (WSGI-based) |
+| Deployment | Azure (WSGI-based) |
 
 ---
 
@@ -111,7 +111,7 @@ Task-Manager/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Bharat-Panchal15/flask-To-Do-App.git
+git clone https://github.com/Bharat-Panchal-3578/flask-To-Do-App.git
 cd flask-To-Do-App
 ```
 
@@ -203,6 +203,7 @@ python -m pytest --cov=app --cov-report=term-missing
 ## 📦 Deployment
 
 Deployment-ready for platforms like:
+- **Azure**
 - **Render**
 - **Railway**
 - **Heroku (via Gunicorn)**

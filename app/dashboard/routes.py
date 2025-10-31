@@ -1,6 +1,5 @@
 from . import dashboard_bp
 from flask import render_template
-import logging
 
 @dashboard_bp.route('/tasks')
 def dashboard():
