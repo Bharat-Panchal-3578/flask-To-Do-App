@@ -5,7 +5,7 @@ from app.utils import handle_404, handle_500
 import os
 import logging
 
-def create_app(config_class='app.config.DevelopmentConfig'):
+def create_app(config_class='app.config.ProductionConfig'):
     app = Flask(__name__)
     load_dotenv()
 
