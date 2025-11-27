@@ -41,5 +41,5 @@ class BlackListedToken(db.Model):
     __tablename__ = 'blacklisted_tokens'
 
     id = db.Column(db.Integer,primary_key=True)
-    token = db.Column(db.String(500),nullable=False,unique=True)
+    jti = db.Column(db.String(36),nullable=False,unique=True)
     blacklisted_on = db.Column(db.DateTime(timezone=True),default=datetime.now)

@@ -1,6 +1,6 @@
 from flask import request
 from flask_restful import Resource
-from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt_identity
+from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt_identity, decode_token
 from app.models import User
 from app.extensions import db
 from app.utils import success_response, error_response
@@ -66,7 +66,15 @@ class LogoutResource(Resource):
         if not refresh_token:
             return error_response(message="Refresh token is required.",status=400)
         
-        blacklisted_token = BlackListedToken(token=refresh_token)
+        # Decode token to extract JTI
+        try:
+            decoded_token = decode_token(refresh_token)
+            jti = decoded_token["jti"]
+        except Exception:
+            return error_response("Invalid or expired token",400)
+        
+        # Save JTI into blacklisted
+        blacklisted_token = BlackListedToken(jti=jti)
 
         db.session.add(blacklisted_token)
         db.session.commit()

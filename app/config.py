@@ -5,6 +5,8 @@ class Config:
     DEBUG = False  # Default: overridden by child classes
     SECRET_KEY = os.environ.get("SECRET_KEY")
     JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
+    JWT_BLACKLIST_ENABLED = True
+    JWT_BLACKLIST_TOKEN_CHECKS = ["access","refresh"]
 
     # Compose DB URI from env variables
     DB_USER = os.environ.get("DB_USER")
