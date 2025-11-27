@@ -34,3 +34,21 @@ def test_refresh_token_missing_header(client):
     response = client.post(url_for("auth.refreshtokenresource"))
 
     assert response.status_code in [401, 422]
+
+def test_refresh_token_with_blacklisted_token(client, db, setup_user_with_token):
+    """POST /api/refresh with blacklisted token should fail and return 401 """
+    user, refresh_token = setup_user_with_token
+
+    # Logout to blacklist token
+    client.post(url_for("auth.logoutresource"),json={"refresh_token": refresh_token})
+
+    # Try to refresh with same token
+    response = client.post(
+        url_for("auth.refreshtokenresource"),
+        headers={"Authorization": f"Bearer {refresh_token}"}
+    )
+    data = response.get_json()
+
+    assert response.status_code == 401
+    assert data["status"] == "error"
+    assert "Token has been revoked" in data["message"]

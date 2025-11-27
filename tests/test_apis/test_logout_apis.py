@@ -1,24 +1,40 @@
 import pytest
 from flask import url_for
-from app.models import BlackListedToken
+from flask_jwt_extended import create_refresh_token, decode_token
+from app.models import BlackListedToken, User
 from app.extensions import db
 
-def test_logout_success(client, db):
-    """
-    POST /api/logout with valid refresh_token should blacklist the token and return 200.
-    """
-    payload = {
-        "refresh_token": "dummy_refresh_token_12345"
-    }
+@pytest.fixture
+def setup_user_with_token(db):
+    """Create a user and generate a refresh token."""
+    user = User(username="test_user")
+    user.set_password("test_password")
+    db.session.add(user)
+    db.session.commit()
 
-    response = client.post(url_for("auth.logoutresource"),json=payload)
+    refresh_token = create_refresh_token(identity=str(user.id))
+    return user, refresh_token
+
+def test_logout_success(client, db, setup_user_with_token):
+    """
+    POST /api/logout should blacklist the refresh token JTI and return 200.
+    """
+    user, refresh_token = setup_user_with_token
+
+    response = client.post(
+        url_for("auth.logoutresource"),
+        json={"refresh_token": refresh_token}
+    )
     data = response.get_json()
 
     assert response.status_code == 200
     assert data["status"] == "success"
     assert "Logged out successfully" in data["message"]
 
-    blacklisted = BlackListedToken.query.filter_by(token="dummy_refresh_token_12345").first()
+    # Check that JTI s in blacklist
+    decoded = decode_token(refresh_token)
+    jti = decoded["jti"]
+    blacklisted = BlackListedToken.query.filter_by(jti=jti).first()
     assert blacklisted is not None
 
 def test_logout_missing_token(client, db):
