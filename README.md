@@ -1,4 +1,4 @@
-# 🗂️ Task Manager
+# 🗂️ Taskora
 
 A full-featured **Task Management Web Application** built with **Flask**, **MySQL**, and **JWT Authentication**, featuring RESTful APIs, user authentication, and a clean front-end interface.  
 This project demonstrates strong backend design, secure API development, frontend integration, and comprehensive testing coverage.

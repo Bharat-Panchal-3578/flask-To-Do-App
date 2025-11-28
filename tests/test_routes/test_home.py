@@ -17,6 +17,6 @@ def test_home_page_content(client):
     response = client.get(url_for('home.home'))
     content = response.get_data(as_text=True)
 
-    assert "Welcome to Task Manager" in content
+    assert "Welcome to Taskora" in content
     assert "Get Started" in content
     assert "Login" in content
