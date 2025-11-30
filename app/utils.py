@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request
 import logging
 
 def success_response(data=None,message="ok",status=200):
@@ -18,10 +18,10 @@ def error_response(message='Something went wrong',status=404):
 
 def handle_404(error):
     """404 Error handler"""
-    logging.warning(f"404 Error: {error}")
+    logging.error(f"404 Error: {request.path}")
     return render_template('404.html'), 404
 
 def handle_500(error):
     """500 Error handler"""
-    logging.error(f"500 Error: {error}", exc_info=error)
+    logging.error(f"500 Error: {request.path}")
     return render_template('500.html'), 500

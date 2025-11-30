@@ -4,7 +4,6 @@ from app.extensions import db, jwt, migrate
 from app.utils import handle_404, handle_500
 import os
 import logging
-import sys
 
 def create_app(config_class='app.config.ProductionConfig'):
     app = Flask(__name__)
@@ -20,18 +19,9 @@ def create_app(config_class='app.config.ProductionConfig'):
     # Make sure logging folder exists
     os.makedirs(os.path.dirname(log_file),exist_ok=True)
 
-    # Formatter
-    formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
-
-    # File Handler
-    file_handler = logging.FileHandler(filename=log_file)
-    file_handler.setFormatter(formatter)
-    file_handler.setLevel(getattr(logging, app.config.get('LOG_LEVEL', 'ERROR').upper()))
-
-    # Console Handler (stdout)
-    console_handler = logging.StreamHandler(sys.stdout)
-    console_handler.setFormatter(formatter)
-    console_handler.setLevel(getattr(logging, app.config.get('LOG_LEVEL', 'ERROR').upper()))
+    # Configure logging
+    level = getattr(logging,log_level,logging.DEBUG)
+    logging.basicConfig(filename=log_file,level=level,format="%(asctime)s [%(levelname)s] %(message)s")
 
     # Initialize extensions (like SQLAlchemy)
     db.init_app(app)
