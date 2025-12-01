@@ -3,6 +3,9 @@
 A full-featured **Task Management Web Application** built with **Flask**, **MySQL**, and **JWT Authentication**, featuring RESTful APIs, user authentication, and a clean front-end interface.  
 This project demonstrates strong backend design, secure API development, frontend integration, and comprehensive testing coverage.
 
+🌐 **Live Website:** https://www.taskora.me  
+🔒 **Secure (HTTPS) — SSL enabled automatically through Azure**
+
 ---
 
 ## 🚀 Features
@@ -139,8 +142,7 @@ flask db upgrade
 ```bash
 python run.py   
 ```
-> App will run at: [https://flask-to-do-app-aufe.onrender.com/](https://flask-to-do-app-aufe.onrender.com/)
-*(The demo may not function fully due to an expired database connection.)*
+> Production App running live at: [https://www.taskora.me](https://www.taskora.me)
 
 ---
 
@@ -202,14 +204,14 @@ python -m pytest --cov=app --cov-report=term-missing
 
 ## 📦 Deployment
 
-Deployment-ready for platforms like:
-- **Azure**
-- **Render**
-- **Railway**
-- **Heroku (via Gunicorn)**
-- or any **WSGI-compatible host**
+Taskora is fully deployed on Azure App Service with:
+- Custom domain → **taskora.me**
+- SSL Certificates → Managed by Azure
+- Stable production environment
+- MySQL Flexible Server (Azure Database)
+- Any **WSGI-compatible host** production setup
 
-Ensure to:
+To deploy manually:
 1. Set environment variable `FLASK_CONFIG=app.config.ProductionConfig`
 2. Update your MySQL connection URI.
 3. Add `.env` for secret keys and credentials.
